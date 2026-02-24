@@ -1,125 +1,60 @@
-/* ============================================
-   NAGABA CLINIC — Scripts
-   ============================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
-
-    // ---------- Scroll Animations ----------
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('fade-in--visible');
-                }, index * 80);
-                observer.unobserve(entry.target);
+    // ---- Scroll animations ----
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+                setTimeout(() => e.target.classList.add('anim--visible'), i * 60);
+                obs.unobserve(e.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.anim').forEach(el => obs.observe(el));
 
-    fadeElements.forEach(el => observer.observe(el));
-
-    // ---------- Navbar Scroll ----------
-    const nav = document.getElementById('nav');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.scrollY;
-        if (currentScroll > 50) {
-            nav.classList.add('nav--scrolled');
-        } else {
-            nav.classList.remove('nav--scrolled');
-        }
-        lastScroll = currentScroll;
+    // ---- Mobile menu ----
+    const burger = document.getElementById('burger');
+    const links = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+        links.classList.toggle('nav__links--open');
     });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+    }));
 
-    // ---------- Mobile Menu ----------
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav__links--open');
-        hamburger.classList.toggle('nav__hamburger--open');
-    });
-
-    // Close mobile menu on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('nav__links--open');
-            hamburger.classList.remove('nav__hamburger--open');
+    // ---- Smooth scroll ----
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+            const t = document.querySelector(this.getAttribute('href'));
+            if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
         });
     });
 
-    // ---------- Smooth Scroll ----------
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-
-    // ---------- Cookie Banner ----------
-    const cookieBanner = document.getElementById('cookieBanner');
-    const cookieAccept = document.getElementById('cookieAccept');
-    const cookieReject = document.getElementById('cookieReject');
-    const cookieSettings = document.getElementById('cookieSettings');
-    const cookieDetails = document.getElementById('cookieDetails');
-    const cookieSave = document.getElementById('cookieSave');
-
-    // Show banner if no consent stored
-    if (!localStorage.getItem('cookie-consent')) {
-        setTimeout(() => {
-            cookieBanner.classList.add('cookie-banner--visible');
-        }, 1500);
-    }
-
-    function hideBanner() {
-        cookieBanner.classList.remove('cookie-banner--visible');
-    }
-
-    cookieAccept.addEventListener('click', () => {
-        localStorage.setItem('cookie-consent', 'all');
-        hideBanner();
-    });
-
-    cookieReject.addEventListener('click', () => {
-        localStorage.setItem('cookie-consent', 'essential');
-        hideBanner();
-    });
-
-    cookieSettings.addEventListener('click', () => {
-        cookieDetails.classList.toggle('cookie-banner__details--visible');
-    });
-
-    cookieSave.addEventListener('click', () => {
-        const analytics = document.getElementById('cookieAnalytics').checked;
-        const marketing = document.getElementById('cookieMarketing').checked;
-        const consent = { essential: true, analytics, marketing };
-        localStorage.setItem('cookie-consent', JSON.stringify(consent));
-        hideBanner();
-    });
-
-    // ---------- Floating CTA visibility ----------
-    const floatingCta = document.getElementById('floatingCta');
-    const heroSection = document.getElementById('hero');
-
-    if (floatingCta && heroSection) {
-        const heroObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    floatingCta.style.opacity = '1';
-                    floatingCta.style.pointerEvents = 'auto';
-                } else {
-                    floatingCta.style.opacity = '0';
-                    floatingCta.style.pointerEvents = 'none';
-                }
+    // ---- FAB visibility ----
+    const fab = document.getElementById('fab');
+    const heroEl = document.querySelector('.hero');
+    if (fab && heroEl) {
+        const hobs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                fab.style.opacity = e.isIntersecting ? '0' : '1';
+                fab.style.pointerEvents = e.isIntersecting ? 'none' : 'auto';
             });
         }, { threshold: 0.3 });
-
-        heroObserver.observe(heroSection);
+        hobs.observe(heroEl);
     }
 
+    // ---- Cookies ----
+    const ck = document.getElementById('cookies');
+    if (!localStorage.getItem('ck-consent')) {
+        setTimeout(() => ck.classList.add('cookies--visible'), 1200);
+    }
+    const hide = () => ck.classList.remove('cookies--visible');
+    document.getElementById('ckAccept').addEventListener('click', () => { localStorage.setItem('ck-consent', 'all'); hide(); });
+    document.getElementById('ckReject').addEventListener('click', () => { localStorage.setItem('ck-consent', 'essential'); hide(); });
+    document.getElementById('ckSettings').addEventListener('click', () => {
+        document.getElementById('ckDetails').classList.toggle('cookies__details--show');
+    });
+    document.getElementById('ckSave').addEventListener('click', () => {
+        const c = { essential: true, analytics: document.getElementById('ckAnal').checked, marketing: document.getElementById('ckMark').checked };
+        localStorage.setItem('ck-consent', JSON.stringify(c));
+        hide();
+    });
 });
