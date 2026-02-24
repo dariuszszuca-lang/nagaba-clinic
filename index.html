@@ -7,303 +7,467 @@
     <meta name="description" content="Kameralna klinika w otoczeniu kaszubskiej przyrody. Indywidualne podejście, profesjonalny zespół, przestrzeń do odnowy. Blisko Gdańska, Sopotu i Gdyni.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://nagaba-clinic.pl">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Nagaba Clinic | Kameralna Klinika na Kaszubach">
     <meta property="og:description" content="Kameralna klinika w otoczeniu kaszubskiej przyrody. Indywidualne podejście, profesjonalny zespół, przestrzeń do odnowy.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nagaba-clinic.pl">
     <meta property="og:locale" content="pl_PL">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
         "name": "Nagaba Clinic",
-        "description": "Kameralna klinika w otoczeniu kaszubskiej przyrody.",
+        "description": "Kameralna klinika w otoczeniu kaszubskiej przyrody. Indywidualne podejście, profesjonalny zespół, przestrzeń do odnowy.",
         "url": "https://nagaba-clinic.pl",
         "telephone": "+48731395295",
-        "address": { "@type": "PostalAddress", "streetAddress": "Wichrowe Wzgórza 21", "addressLocality": "Kąpino", "postalCode": "84-200", "addressCountry": "PL" },
-        "geo": { "@type": "GeoCoordinates", "latitude": 54.6273455, "longitude": 18.2585185 },
-        "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" }
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Wichrowe Wzgórza 21",
+            "addressLocality": "Kąpino",
+            "postalCode": "84-200",
+            "addressCountry": "PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 54.6273455,
+            "longitude": 18.2585185
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.3",
+            "reviewCount": "145"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        }
     }
     </script>
 </head>
 <body>
 
-    <!-- ===== NAV ===== -->
+    <!-- ============ NAVIGATION ============ -->
     <nav class="nav" id="nav">
-        <a href="#" class="nav__logo">Nagaba <span>Clinic</span></a>
-        <div class="nav__links" id="navLinks">
-            <a href="#o-nas">O nas</a>
-            <a href="#podejscie">Podejście</a>
-            <a href="#zespol">Zespół</a>
-            <a href="#lokalizacja">Dojazd</a>
-            <a href="#faq">FAQ</a>
+        <div class="nav__container">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-icon">&#9678;</span>
+                Nagaba <span class="nav__logo-accent">Clinic</span>
+            </a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#o-nas">O nas</a></li>
+                <li><a href="#podejscie">Podejście</a></li>
+                <li><a href="#zespol">Zespół</a></li>
+                <li><a href="#lokalizacja">Lokalizacja</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <a href="tel:+48731395295" class="nav__cta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                731 395 295
+            </a>
+            <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <a href="tel:+48731395295" class="nav__cta"><span class="nav__dot"></span> 731 395 295</a>
-        <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
     </nav>
 
-    <!-- ===== HERO — split asymmetric ===== -->
-    <header class="hero">
-        <div class="hero__text">
-            <p class="hero__tag">Kameralna klinika na Kaszubach</p>
-            <h1>Miejsce, gdzie<br>zaczyna się <em>zmiana.</em></h1>
-            <p class="hero__desc">Indywidualne podejście. Profesjonalny zespół. Przestrzeń do odnowy w otoczeniu kaszubskiej przyrody, kilkanaście minut od Trójmiasta.</p>
-            <div class="hero__btns">
-                <a href="tel:+48731395295" class="btn btn--primary">Zadzwoń teraz</a>
-                <a href="https://osrodek-myway.pl" class="btn btn--outline" target="_blank" rel="noopener">Dowiedz się więcej &rarr;</a>
-            </div>
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="hero__blob hero__blob--1"></div>
+            <div class="hero__blob hero__blob--2"></div>
+            <div class="hero__blob hero__blob--3"></div>
         </div>
-        <div class="hero__visual">
-            <img src="img/budynek.jpeg" alt="Budynek Nagaba Clinic w otoczeniu natury" class="hero__photo anim" loading="eager">
-            <div class="hero__card hero__card--1 anim">
-                <span class="hero__card-num">500+</span>
-                <span class="hero__card-label">osób, którym pomogliśmy</span>
+        <div class="hero__content">
+            <p class="hero__badge">Kameralna klinika na Kaszubach</p>
+            <h1 class="hero__title">Miejsce, gdzie zaczyna się <em>zmiana</em></h1>
+            <p class="hero__subtitle">Indywidualne podejście, profesjonalny zespół i przestrzeń do odnowy — w otoczeniu kaszubskiej przyrody, blisko Trójmiasta.</p>
+            <div class="hero__ctas">
+                <a href="tel:+48731395295" class="btn btn--primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Zadzwoń teraz
+                </a>
+                <a href="https://osrodek-myway.pl" class="btn btn--outline" target="_blank" rel="noopener">Dowiedz się więcej</a>
             </div>
-            <div class="hero__card hero__card--2 anim">
-                <span class="hero__card-num">24/7</span>
-                <span class="hero__card-label">dostępność</span>
-            </div>
+            <p class="hero__availability">
+                <span class="hero__dot"></span>
+                Czynne całodobowo — 7 dni w tygodniu
+            </p>
+        </div>
+        <div class="hero__scroll">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
         </div>
     </header>
 
-    <!-- ===== MARQUEE ===== -->
-    <div class="marquee" aria-hidden="true">
-        <div class="marquee__inner">
-            <span>Kameralna atmosfera &#10041; Indywidualny program &#10041; Lokalizacja w naturze &#10041; Doświadczony zespół &#10041; Wsparcie po pobycie &#10041; Kameralna atmosfera &#10041; Indywidualny program &#10041; Lokalizacja w naturze &#10041; Doświadczony zespół &#10041; Wsparcie po pobycie &#10041;&nbsp;</span>
-        </div>
-    </div>
-
-    <!-- ===== O NAS — text + bento grid ===== -->
+    <!-- ============ O NAS ============ -->
     <section class="about" id="o-nas">
-        <div class="about__intro anim">
-            <p class="label">O nas</p>
-            <h2>Stworzyliśmy miejsce, w&nbsp;którym możesz skupić się <em>wyłącznie na sobie.</em></h2>
-        </div>
-        <div class="about__content">
-            <div class="about__copy anim">
-                <p>Nagaba Clinic to kameralne miejsce położone w sercu kaszubskich lasów. Oferujemy kompleksowe wsparcie — od komfortowych warunków pobytu, przez indywidualny program rozwoju, aż po kontynuację po zakończeniu pobytu.</p>
-                <p>Wierzymy, że zmiana jest możliwa dla każdego. Wystarczy odpowiednie miejsce, odpowiedni ludzie i gotowość, żeby zrobić pierwszy krok.</p>
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">O nas</p>
+                <h2 class="section-title">Przestrzeń stworzona<br>dla <em>Twojej odnowy</em></h2>
             </div>
-            <div class="bento anim">
-                <div class="bento__cell bento__cell--img">
-                    <img src="img/aerial.jpg" alt="Widok z lotu ptaka na ośrodek" loading="lazy">
+            <div class="about__image fade-in">
+                <img src="img/aerial.jpg" alt="Nagaba Clinic z lotu ptaka — ośrodek w otoczeniu kaszubskich lasów" class="about__photo">
+            </div>
+            <div class="about__grid">
+                <div class="about__text fade-in">
+                    <p class="about__lead">Nagaba Clinic to kameralne miejsce położone w sercu kaszubskich lasów. Stworzyliśmy przestrzeń, w której możesz odciąć się od codzienności i skupić wyłącznie na sobie.</p>
+                    <p>Oferujemy kompleksowe wsparcie — od komfortowych warunków pobytu, przez indywidualny program rozwoju, aż po kontynuację po zakończeniu pobytu. Każdy, kto do nas trafia, jest traktowany z szacunkiem i zrozumieniem.</p>
+                    <p>Wierzymy, że zmiana jest możliwa dla każdego. Wystarczy odpowiednie miejsce, odpowiedni ludzie i gotowość, żeby zrobić pierwszy krok.</p>
                 </div>
-                <div class="bento__cell">
-                    <img src="img/pokoj.jpg" alt="Komfortowy pokój" loading="lazy" class="bento__photo">
-                    <h3>Komfort</h3>
-                    <p>Wygodne pokoje, pełne wyżywienie.</p>
-                </div>
-                <div class="bento__cell">
-                    <img src="img/sala.jpg" alt="Sala spotkań" loading="lazy" class="bento__photo">
-                    <h3>Przestrzeń</h3>
-                    <p>Miejsce na warsztaty i sesje grupowe.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== PODEJŚCIE — horizontal scroll cards ===== -->
-    <section class="cards-section" id="podejscie">
-        <div class="cards-section__header anim">
-            <p class="label">Nasze podejście</p>
-            <h2>Dlaczego <em>Nagaba Clinic</em></h2>
-        </div>
-        <div class="hscroll">
-            <div class="hcard anim">
-                <div class="hcard__num">01</div>
-                <h3>Kameralna atmosfera</h3>
-                <p>Małe grupy, indywidualne podejście. Nie jesteś kolejnym numerem — jesteś osobą z własną historią.</p>
-            </div>
-            <div class="hcard anim">
-                <div class="hcard__num">02</div>
-                <h3>Indywidualny program</h3>
-                <p>Warsztaty, sesje, zajęcia relaksacyjne — wszystko dopasowane do Twoich potrzeb.</p>
-            </div>
-            <div class="hcard anim">
-                <div class="hcard__num">03</div>
-                <h3>Doświadczony zespół</h3>
-                <p>Ludzie z pasją i doświadczeniem. Towarzyszymy bez moralizowania — z szacunkiem.</p>
-            </div>
-            <div class="hcard anim">
-                <div class="hcard__num">04</div>
-                <h3>Lokalizacja w naturze</h3>
-                <p>Kaszubskie lasy, cisza, świeże powietrze. Blisko Trójmiasta — idealne do regeneracji.</p>
-            </div>
-            <div class="hcard anim">
-                <div class="hcard__num">05</div>
-                <h3>Wsparcie po pobycie</h3>
-                <p>Spotkania online, regularne zjazdy, stały kontakt. Nie zostawiamy Cię samego.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== PROCES — vertical timeline ===== -->
-    <section class="timeline-section">
-        <div class="timeline-section__inner">
-            <div class="timeline-section__header anim">
-                <p class="label">Jak to wygląda</p>
-                <h2>Twoja droga do <em>zmiany</em></h2>
-            </div>
-            <div class="timeline">
-                <div class="tl anim">
-                    <div class="tl__marker"><span>1</span></div>
-                    <div class="tl__body">
-                        <h3>Pierwszy kontakt</h3>
-                        <p>Zadzwoń do nas. Porozmawiamy, odpowiemy na pytania, doradzimy. Bez zobowiązań.</p>
+                <div class="about__stats fade-in">
+                    <div class="stat">
+                        <span class="stat__number">500+</span>
+                        <span class="stat__label">osób, którym pomogliśmy</span>
                     </div>
-                </div>
-                <div class="tl anim">
-                    <div class="tl__marker"><span>2</span></div>
-                    <div class="tl__body">
-                        <h3>Indywidualny plan</h3>
-                        <p>Program dopasowany do Ciebie — cele, ramy czasowe, sposób pracy.</p>
+                    <div class="stat">
+                        <span class="stat__number">5+</span>
+                        <span class="stat__label">lat doświadczenia</span>
                     </div>
-                </div>
-                <div class="tl anim">
-                    <div class="tl__marker"><span>3</span></div>
-                    <div class="tl__body">
-                        <h3>Pobyt i praca nad sobą</h3>
-                        <p>Warsztaty, sesje, aktywności w naturze. Codzienne wsparcie i komfort.</p>
+                    <div class="stat">
+                        <span class="stat__number">4.3</span>
+                        <span class="stat__label">ocena w Google</span>
                     </div>
-                </div>
-                <div class="tl anim">
-                    <div class="tl__marker"><span>4</span></div>
-                    <div class="tl__body">
-                        <h3>Kontynuacja po pobycie</h3>
-                        <p>Spotkania online, zjazdy, stały kontakt z zespołem.</p>
+                    <div class="stat">
+                        <span class="stat__number">24/7</span>
+                        <span class="stat__label">dostępność</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== ZESPÓŁ — editorial layout ===== -->
+    <!-- ============ GALERIA ============ -->
+    <section class="gallery">
+        <div class="gallery__track">
+            <div class="gallery__item fade-in">
+                <img src="img/budynek.jpeg" alt="Budynek Nagaba Clinic" loading="lazy">
+                <span class="gallery__caption">Nasz ośrodek</span>
+            </div>
+            <div class="gallery__item fade-in">
+                <img src="img/pokoj.jpg" alt="Komfortowy pokój" loading="lazy">
+                <span class="gallery__caption">Pokoje</span>
+            </div>
+            <div class="gallery__item fade-in">
+                <img src="img/sala.jpg" alt="Sala spotkań" loading="lazy">
+                <span class="gallery__caption">Sala spotkań</span>
+            </div>
+            <div class="gallery__item fade-in">
+                <img src="img/interior.jpg" alt="Wnętrze kliniki" loading="lazy">
+                <span class="gallery__caption">Wnętrza</span>
+            </div>
+            <div class="gallery__item fade-in">
+                <img src="img/natura.jpg" alt="Otoczenie natury" loading="lazy">
+                <span class="gallery__caption">Otoczenie</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PODEJŚCIE ============ -->
+    <section class="approach" id="podejscie">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Nasze podejście</p>
+                <h2 class="section-title">Dlaczego <em>Nagaba Clinic</em></h2>
+            </div>
+            <div class="approach__grid">
+                <div class="card fade-in">
+                    <div class="card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3 class="card__title">Kameralna atmosfera</h3>
+                    <p class="card__text">Małe grupy, indywidualne podejście. Każdy jest tu ważny — nie jesteś kolejnym numerem, lecz osobą z własną historią.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                    </div>
+                    <h3 class="card__title">Indywidualny program</h3>
+                    <p class="card__text">Program dopasowany do Twoich potrzeb. Warsztaty, sesje indywidualne, zajęcia relaksacyjne — wszystko w Twoim tempie.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3 class="card__title">Doświadczony zespół</h3>
+                    <p class="card__text">Nasz zespół to ludzie z pasją i wieloletnim doświadczeniem. Towarzyszymy Ci w procesie zmiany bez moralizowania — z szacunkiem.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="card__title">Lokalizacja w naturze</h3>
+                    <p class="card__text">Kaszubskie lasy, cisza, świeże powietrze. Z dala od miejskiego zgiełku, ale blisko Trójmiasta — idealne warunki do regeneracji.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROCES ============ -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Jak to wygląda</p>
+                <h2 class="section-title">Twoja droga <em>do zmiany</em></h2>
+            </div>
+            <div class="process__steps">
+                <div class="step fade-in">
+                    <div class="step__number">01</div>
+                    <h3 class="step__title">Pierwszy kontakt</h3>
+                    <p class="step__text">Zadzwoń do nas. Porozmawiamy o Twojej sytuacji, odpowiemy na pytania i doradzimy najlepsze rozwiązanie. Bez zobowiązań.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step__number">02</div>
+                    <h3 class="step__title">Indywidualny plan</h3>
+                    <p class="step__text">Tworzymy program dopasowany do Twoich potrzeb. Określamy cele, ramy czasowe i sposób pracy — wszystko w porozumieniu z Tobą.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step__number">03</div>
+                    <h3 class="step__title">Pobyt i praca nad sobą</h3>
+                    <p class="step__text">Warsztaty, sesje, aktywności w otoczeniu natury. Codzienne wsparcie zespołu, komfortowe warunki i pełne wyżywienie.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step__number">04</div>
+                    <h3 class="step__title">Kontynuacja po pobycie</h3>
+                    <p class="step__text">Nie zostawiamy Cię samego. Spotkania online, regularne zjazdy i stały kontakt z zespołem — żebyś mógł utrzymać nowy kierunek.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ZESPÓŁ ============ -->
     <section class="team" id="zespol">
-        <div class="team__inner">
-            <div class="team__header anim">
-                <p class="label">Nasz zespół</p>
-                <h2>Ludzie, którzy <em>rozumieją</em></h2>
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Nasz zespół</p>
+                <h2 class="section-title">Ludzie, którzy <em>rozumieją</em></h2>
             </div>
-            <div class="team__row">
-                <div class="person anim">
-                    <img src="img/krystian.png" alt="Krystian Nagaba" class="person__avatar" loading="lazy">
-                    <div class="person__info">
-                        <h3>Krystian Nagaba</h3>
-                        <p class="person__role">Założyciel · Specjalista ds. rozwoju osobistego</p>
-                        <p class="person__bio">Dyplomowany specjalista psychologii pozytywnej i odporności psychicznej. Ponad 5 lat doświadczenia i 500+ osób, którym pomógł znaleźć nową drogę. Towarzyszy w procesie zmiany bez moralizowania — z szacunkiem i zrozumieniem.</p>
-                        <div class="person__links">
-                            <a href="https://www.instagram.com/krystiannagaba/" target="_blank" rel="noopener">Instagram</a>
-                            <a href="https://www.youtube.com/@krystiannagaba" target="_blank" rel="noopener">YouTube</a>
-                            <a href="https://www.tiktok.com/@krystian.nagaba" target="_blank" rel="noopener">TikTok</a>
-                        </div>
+            <div class="team__grid">
+                <div class="team__member fade-in">
+                    <img src="img/krystian.png" alt="Krystian Nagaba" class="team__photo">
+                    <h3 class="team__name">Krystian Nagaba</h3>
+                    <p class="team__role">Założyciel, specjalista ds. rozwoju osobistego</p>
+                    <p class="team__bio">Dyplomowany specjalista psychologii pozytywnej i odporności psychicznej. Ponad 5 lat doświadczenia i 500+ osób, którym pomógł znaleźć nową drogę. Towarzyszy w procesie zmiany bez moralizowania — z szacunkiem i zrozumieniem.</p>
+                    <div class="team__social">
+                        <a href="https://www.instagram.com/krystiannagaba/" target="_blank" rel="noopener" aria-label="Instagram Krystiana">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@krystiannagaba" target="_blank" rel="noopener" aria-label="YouTube Krystiana">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@krystian.nagaba" target="_blank" rel="noopener" aria-label="TikTok Krystiana">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.57 6.33 6.33 0 0 0 9.37 22a6.33 6.33 0 0 0 6.33-6.33V9.31a8.16 8.16 0 0 0 4.29 1.2V7.15a4.85 4.85 0 0 1-.4-.46z"/></svg>
+                        </a>
                     </div>
                 </div>
-                <div class="person anim">
-                    <img src="img/natalia.jpg" alt="Natalia Pucz" class="person__avatar" loading="lazy">
-                    <div class="person__info">
-                        <h3>Natalia Pucz</h3>
-                        <p class="person__role">Specjalistka · Wsparcie w procesie zmiany</p>
-                        <p class="person__bio">Empatyczna, profesjonalna, oddana pracy z ludźmi. Natalia buduje bezpieczną przestrzeń do rozmowy i rozwoju. Jej ciepłe podejście sprawia, że od pierwszego dnia czujesz się jak w domu.</p>
-                        <div class="person__links">
-                            <a href="https://www.facebook.com/natalia.pucz" target="_blank" rel="noopener">Facebook</a>
-                        </div>
+                <div class="team__member fade-in">
+                    <img src="img/natalia.jpg" alt="Natalia Pucz" class="team__photo">
+                    <h3 class="team__name">Natalia Pucz</h3>
+                    <p class="team__role">Specjalistka, wsparcie w procesie zmiany</p>
+                    <p class="team__bio">Empatyczna, profesjonalna, oddana pracy z ludźmi. Natalia buduje bezpieczną przestrzeń do rozmowy i rozwoju. Jej ciepłe podejście sprawia, że od pierwszego dnia czujesz się jak w domu.</p>
+                    <div class="team__social">
+                        <a href="https://www.facebook.com/natalia.pucz" target="_blank" rel="noopener" aria-label="Facebook Natalii">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== LOKALIZACJA — map + info side by side ===== -->
-    <section class="loc" id="lokalizacja">
-        <div class="loc__inner">
-            <div class="loc__info anim">
-                <p class="label">Lokalizacja</p>
-                <h2>Blisko Trójmiasta,<br><em>daleko od zgiełku</em></h2>
-                <address>Nagaba Clinic<br>ul. Wichrowe Wzgórza 21<br>84-200 Kąpino</address>
-                <div class="loc__grid">
-                    <div class="loc__dist"><strong>Wejherowo</strong> 5 km · 5 min</div>
-                    <div class="loc__dist"><strong>Gdynia</strong> 12 km · 15 min</div>
-                    <div class="loc__dist"><strong>Sopot</strong> 18 km · 20 min</div>
-                    <div class="loc__dist"><strong>Gdańsk</strong> 30 km · 30 min</div>
-                </div>
-                <p class="loc__note">Bezpłatny odbiór z dworca — do ustalenia telefonicznie.</p>
+    <!-- ============ LOKALIZACJA ============ -->
+    <section class="location" id="lokalizacja">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Lokalizacja</p>
+                <h2 class="section-title">Blisko Trójmiasta,<br><em>daleko od zgiełku</em></h2>
             </div>
-            <div class="loc__map anim">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2312.5!2d18.2585185!3d54.6273455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fda17ea9a6ceed%3A0xd18689e7fe5655cf!2sMy%20Way%20-%20O%C5%9Brodek%20Leczenia%20Uzale%C5%BCnie%C5%84!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl" width="100%" height="100%" style="border:0;border-radius:16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="location__grid">
+                <div class="location__info fade-in">
+                    <div class="location__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <div>
+                            <strong>Nagaba Clinic</strong><br>
+                            ul. Wichrowe Wzgórza 21<br>
+                            84-200 Kąpino
+                        </div>
+                    </div>
+                    <div class="location__distances">
+                        <div class="distance">
+                            <span class="distance__city">Wejherowo</span>
+                            <span class="distance__line"></span>
+                            <span class="distance__info">5 km · 5 min</span>
+                        </div>
+                        <div class="distance">
+                            <span class="distance__city">Gdynia</span>
+                            <span class="distance__line"></span>
+                            <span class="distance__info">12 km · 15 min</span>
+                        </div>
+                        <div class="distance">
+                            <span class="distance__city">Sopot</span>
+                            <span class="distance__line"></span>
+                            <span class="distance__info">18 km · 20 min</span>
+                        </div>
+                        <div class="distance">
+                            <span class="distance__city">Gdańsk</span>
+                            <span class="distance__line"></span>
+                            <span class="distance__info">30 km · 30 min</span>
+                        </div>
+                    </div>
+                    <p class="location__note">Bezpłatny odbiór z dworca — do ustalenia telefonicznie.</p>
+                </div>
+                <div class="location__map fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2312.5!2d18.2585185!3d54.6273455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fda17ea9a6ceed%3A0xd18689e7fe5655cf!2sMy%20Way%20-%20O%C5%9Brodek%20Leczenia%20Uzale%C5%BCnie%C5%84!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl" width="100%" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
+    <!-- ============ FAQ ============ -->
     <section class="faq" id="faq">
-        <div class="faq__inner">
-            <div class="faq__header anim">
-                <p class="label">FAQ</p>
-                <h2>Najczęściej zadawane <em>pytania</em></h2>
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Pytania</p>
+                <h2 class="section-title">Najczęściej <em>zadawane pytania</em></h2>
             </div>
             <div class="faq__list">
-                <details class="fq anim"><summary>Jak wygląda pierwszy kontakt?</summary><p>Zadzwoń pod 731 395 295. Porozmawiamy o Twojej sytuacji, odpowiemy na pytania. Rozmowa jest bezpłatna i niezobowiązująca.</p></details>
-                <details class="fq anim"><summary>Jak długo trwa pobyt?</summary><p>Standardowy program trwa 4-8 tygodni. Dokładny czas ustalamy indywidualnie.</p></details>
-                <details class="fq anim"><summary>Jakie są warunki pobytu?</summary><p>Komfortowe pokoje, pełne wyżywienie, codzienna opieka, warsztaty i zajęcia. Ośrodek w otoczeniu lasu.</p></details>
-                <details class="fq anim"><summary>Czy mogę kontaktować się z bliskimi?</summary><p>Tak. Zasady omawiamy indywidualnie, żeby znaleźć równowagę między wsparciem a procesem zmiany.</p></details>
-                <details class="fq anim"><summary>Co po zakończeniu pobytu?</summary><p>Spotkania online, regularne zjazdy i stały kontakt z zespołem.</p></details>
-                <details class="fq anim"><summary>Jak dojechać?</summary><p>Kąpino, 5 km od Wejherowa, 12 km od Gdyni. Bezpłatny odbiór z dworca.</p></details>
+                <details class="faq__item fade-in">
+                    <summary class="faq__question">Jak wygląda pierwszy kontakt?</summary>
+                    <p class="faq__answer">Zadzwoń do nas pod numer 731 395 295. Porozmawiamy o Twojej sytuacji, odpowiemy na pytania i doradzimy najlepsze rozwiązanie. Rozmowa jest bezpłatna i niezobowiązująca.</p>
+                </details>
+                <details class="faq__item fade-in">
+                    <summary class="faq__question">Jak długo trwa pobyt?</summary>
+                    <p class="faq__answer">Długość pobytu dostosowujemy indywidualnie. Standardowy program trwa od 4 do 8 tygodni, ale dokładny czas ustalamy wspólnie na podstawie Twoich potrzeb i celów.</p>
+                </details>
+                <details class="faq__item fade-in">
+                    <summary class="faq__question">Jakie są warunki pobytu?</summary>
+                    <p class="faq__answer">Oferujemy komfortowe pokoje, pełne wyżywienie, codzienną opiekę zespołu, warsztaty i zajęcia aktywizujące. Ośrodek znajduje się w spokojnej lokalizacji w otoczeniu lasu.</p>
+                </details>
+                <details class="faq__item fade-in">
+                    <summary class="faq__question">Czy możliwy jest kontakt z bliskimi podczas pobytu?</summary>
+                    <p class="faq__answer">Tak, zachęcamy do utrzymywania kontaktu z rodziną. Szczegółowe zasady omawiamy indywidualnie, żeby znaleźć równowagę między wsparciem bliskich a skupieniem na procesie zmiany.</p>
+                </details>
+                <details class="faq__item fade-in">
+                    <summary class="faq__question">Co dzieje się po zakończeniu pobytu?</summary>
+                    <p class="faq__answer">Nie zostawiamy Cię samego. Oferujemy kontynuację w formie spotkań online, regularnych zjazdów i stałego kontaktu z zespołem. Chcemy, żebyś utrzymał nowy kierunek.</p>
+                </details>
+                <details class="faq__item fade-in">
+                    <summary class="faq__question">Jak dojechać do kliniki?</summary>
+                    <p class="faq__answer">Klinika znajduje się w Kąpinie, 5 km od Wejherowa i 12 km od Gdyni. Oferujemy bezpłatny odbiór z dworca — wystarczy umówić się telefonicznie.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- ===== CTA FINAL ===== -->
-    <section class="final-cta" id="kontakt">
-        <div class="final-cta__inner anim">
-            <h2>Gotowy na <em>pierwszy krok?</em></h2>
-            <p>Zadzwoń — porozmawiamy bez zobowiązań i bez oceniania.</p>
-            <div class="final-cta__btns">
-                <a href="tel:+48731395295" class="btn btn--big">731 395 295</a>
-                <a href="https://osrodek-myway.pl" class="btn btn--outline-light" target="_blank" rel="noopener">Dowiedz się więcej &rarr;</a>
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta-section" id="kontakt">
+        <div class="container">
+            <div class="cta-section__content fade-in">
+                <h2 class="cta-section__title">Gotowy na <em>pierwszy krok</em>?</h2>
+                <p class="cta-section__text">Zadzwoń do nas — porozmawiamy o Twojej sytuacji. Bez zobowiązań, bez oceniania. Jesteśmy tu dla Ciebie.</p>
+                <div class="cta-section__buttons">
+                    <a href="tel:+48731395295" class="btn btn--primary btn--large">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        731 395 295
+                    </a>
+                    <a href="https://osrodek-myway.pl" class="btn btn--outline btn--large" target="_blank" rel="noopener">Dowiedz się więcej</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="foot">
-        <div class="foot__inner">
-            <div class="foot__brand">
-                <span class="foot__logo">Nagaba <span>Clinic</span></span>
-                <p>Kameralna klinika na Kaszubach.</p>
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">
+                        <span class="nav__logo-icon">&#9678;</span>
+                        Nagaba <span class="nav__logo-accent">Clinic</span>
+                    </a>
+                    <p class="footer__desc">Kameralna klinika na Kaszubach. Przestrzeń do odnowy w otoczeniu natury.</p>
+                </div>
+                <div class="footer__contact">
+                    <h4>Kontakt</h4>
+                    <p><a href="tel:+48731395295">+48 731 395 295</a></p>
+                    <p>ul. Wichrowe Wzgórza 21</p>
+                    <p>84-200 Kąpino</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Linki</h4>
+                    <p><a href="https://osrodek-myway.pl" target="_blank" rel="noopener">osrodek-myway.pl</a></p>
+                    <p><a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
+                </div>
+                <div class="footer__social">
+                    <h4>Social media</h4>
+                    <div class="footer__social-links">
+                        <a href="https://www.facebook.com/osrodekleczeniauzalezniencom" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/krystiannagaba/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@krystiannagaba" target="_blank" rel="noopener" aria-label="YouTube">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@krystian.nagaba" target="_blank" rel="noopener" aria-label="TikTok">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.57 6.33 6.33 0 0 0 9.37 22a6.33 6.33 0 0 0 6.33-6.33V9.31a8.16 8.16 0 0 0 4.29 1.2V7.15a4.85 4.85 0 0 1-.4-.46z"/></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="foot__col"><h4>Kontakt</h4><a href="tel:+48731395295">+48 731 395 295</a><span>ul. Wichrowe Wzgórza 21, Kąpino</span></div>
-            <div class="foot__col"><h4>Linki</h4><a href="https://osrodek-myway.pl" target="_blank" rel="noopener">osrodek-myway.pl</a><a href="polityka-prywatnosci.html">Polityka prywatności</a></div>
-            <div class="foot__col"><h4>Social</h4><div class="foot__soc"><a href="https://www.facebook.com/osrodekleczeniauzalezniencom" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/krystiannagaba/" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@krystiannagaba" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@krystian.nagaba" target="_blank" rel="noopener">TikTok</a></div></div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Nagaba Clinic. Wszelkie prawa zastrzeżone.</p>
+            </div>
         </div>
-        <div class="foot__bottom"><p>&copy; 2026 Nagaba Clinic</p></div>
     </footer>
 
-    <!-- ===== FAB phone (mobile) ===== -->
-    <a href="tel:+48731395295" class="fab" id="fab" aria-label="Zadzwoń">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <!-- ============ FLOATING CTA (MOBILE) ============ -->
+    <a href="tel:+48731395295" class="floating-cta" id="floatingCta" aria-label="Zadzwoń">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Zadzwoń</span>
     </a>
 
-    <!-- ===== COOKIE BANNER ===== -->
-    <div class="cookies" id="cookies">
-        <div class="cookies__box">
-            <p>Używamy plików cookies. <a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
-            <div class="cookies__btns">
-                <button id="ckSettings" class="cookies__link">Ustawienia</button>
-                <button id="ckReject" class="cookies__reject">Odrzuć</button>
-                <button id="ckAccept" class="cookies__accept">Akceptuj</button>
+    <!-- ============ COOKIE BANNER ============ -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner__content">
+            <p class="cookie-banner__text">Używamy plików cookies, aby zapewnić prawidłowe działanie strony. <a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
+            <div class="cookie-banner__actions">
+                <button class="cookie-banner__btn cookie-banner__btn--settings" id="cookieSettings">Ustawienia</button>
+                <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookieReject">Odrzuć</button>
+                <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Akceptuj</button>
             </div>
-            <div class="cookies__details" id="ckDetails">
-                <label><input type="checkbox" checked disabled> Niezbędne <small>(wymagane)</small></label>
-                <label><input type="checkbox" id="ckAnal"> Analityczne</label>
-                <label><input type="checkbox" id="ckMark"> Marketingowe</label>
-                <button id="ckSave" class="cookies__accept">Zapisz</button>
+        </div>
+        <!-- Granularne ustawienia -->
+        <div class="cookie-banner__details" id="cookieDetails">
+            <div class="cookie-banner__option">
+                <label>
+                    <input type="checkbox" checked disabled> Niezbędne <small>(wymagane)</small>
+                </label>
             </div>
+            <div class="cookie-banner__option">
+                <label>
+                    <input type="checkbox" id="cookieAnalytics"> Analityczne
+                </label>
+            </div>
+            <div class="cookie-banner__option">
+                <label>
+                    <input type="checkbox" id="cookieMarketing"> Marketingowe
+                </label>
+            </div>
+            <button class="cookie-banner__btn cookie-banner__btn--save" id="cookieSave">Zapisz ustawienia</button>
         </div>
     </div>
 
