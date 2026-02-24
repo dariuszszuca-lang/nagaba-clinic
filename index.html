@@ -83,180 +83,192 @@
         </div>
     </nav>
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO — FULL-SCREEN PHOTO ============ -->
     <header class="hero" id="hero">
         <div class="hero__bg">
-            <div class="hero__blob hero__blob--1"></div>
-            <div class="hero__blob hero__blob--2"></div>
-            <div class="hero__blob hero__blob--3"></div>
+            <img src="img/budynek.jpeg" alt="" class="hero__bg-img" fetchpriority="high">
+            <div class="hero__overlay"></div>
         </div>
+
         <div class="hero__content">
-            <p class="hero__badge">Kameralna klinika na Kaszubach</p>
-            <h1 class="hero__title">Miejsce, gdzie zaczyna się <em>zmiana</em></h1>
-            <p class="hero__subtitle">Indywidualne podejście, profesjonalny zespół i przestrzeń do odnowy — w otoczeniu kaszubskiej przyrody, blisko Trójmiasta.</p>
-            <div class="hero__ctas">
-                <a href="tel:+48731395295" class="btn btn--primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    Zadzwoń teraz
-                </a>
-                <a href="https://osrodek-myway.pl" class="btn btn--outline" target="_blank" rel="noopener">Dowiedz się więcej</a>
+            <div class="hero__left">
+                <p class="hero__badge fade-in">Kameralna klinika na Kaszubach</p>
+                <h1 class="hero__title fade-in">
+                    Miejsce, gdzie<br>zaczyna się<br><em>zmiana</em>
+                </h1>
+                <div class="hero__card fade-in">
+                    <p class="hero__subtitle">Indywidualne podejście, profesjonalny zespół i przestrzeń do odnowy — w otoczeniu kaszubskiej przyrody, blisko Trójmiasta.</p>
+                    <div class="hero__ctas">
+                        <a href="tel:+48731395295" class="btn btn--primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Zadzwoń teraz
+                        </a>
+                        <a href="https://osrodek-myway.pl" class="btn btn--ghost" target="_blank" rel="noopener">Dowiedz się więcej</a>
+                    </div>
+                </div>
             </div>
-            <p class="hero__availability">
-                <span class="hero__dot"></span>
-                Czynne całodobowo — 7 dni w tygodniu
-            </p>
+
+            <div class="hero__side fade-in">
+                <div class="hero__stat-pill">
+                    <span class="hero__stat-num">500+</span>
+                    <span class="hero__stat-label">osób, którym pomogliśmy</span>
+                </div>
+                <div class="hero__stat-pill">
+                    <span class="hero__stat-num">4.3</span>
+                    <span class="hero__stat-label">ocena w Google</span>
+                </div>
+                <div class="hero__stat-pill hero__stat-pill--live">
+                    <span class="hero__dot"></span>
+                    <span class="hero__stat-label">Czynne 24/7</span>
+                </div>
+            </div>
         </div>
+
         <div class="hero__scroll">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
         </div>
     </header>
 
-    <!-- ============ O NAS ============ -->
+    <!-- ============ O NAS — PHOTO + OVERLAPPING TEXT ============ -->
     <section class="about" id="o-nas">
+        <div class="about__wrapper">
+            <div class="about__photo-col fade-in">
+                <img src="img/aerial.jpg" alt="Nagaba Clinic z lotu ptaka" class="about__photo">
+                <div class="about__photo-badge">
+                    <span>5+</span> lat doświadczenia
+                </div>
+            </div>
+            <div class="about__text-col">
+                <p class="section-label fade-in">O nas</p>
+                <h2 class="section-title fade-in">Przestrzeń stworzona<br>dla <em>Twojej odnowy</em></h2>
+                <p class="about__lead fade-in">Nagaba Clinic to kameralne miejsce położone w sercu kaszubskich lasów. Stworzyliśmy przestrzeń, w której możesz odciąć się od codzienności i skupić wyłącznie na sobie.</p>
+                <p class="about__body fade-in">Oferujemy kompleksowe wsparcie — od komfortowych warunków pobytu, przez indywidualny program rozwoju, aż po kontynuację po zakończeniu pobytu. Każdy, kto do nas trafia, jest traktowany z szacunkiem i zrozumieniem.</p>
+                <p class="about__body fade-in">Wierzymy, że zmiana jest możliwa dla każdego. Wystarczy odpowiednie miejsce, odpowiedni ludzie i gotowość, żeby zrobić pierwszy krok.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GALERIA — BENTO GRID ============ -->
+    <section class="bento">
         <div class="container">
-            <div class="section-header fade-in">
-                <p class="section-label">O nas</p>
-                <h2 class="section-title">Przestrzeń stworzona<br>dla <em>Twojej odnowy</em></h2>
-            </div>
-            <div class="about__image fade-in">
-                <img src="img/aerial.jpg" alt="Nagaba Clinic z lotu ptaka — ośrodek w otoczeniu kaszubskich lasów" class="about__photo">
-            </div>
-            <div class="about__grid">
-                <div class="about__text fade-in">
-                    <p class="about__lead">Nagaba Clinic to kameralne miejsce położone w sercu kaszubskich lasów. Stworzyliśmy przestrzeń, w której możesz odciąć się od codzienności i skupić wyłącznie na sobie.</p>
-                    <p>Oferujemy kompleksowe wsparcie — od komfortowych warunków pobytu, przez indywidualny program rozwoju, aż po kontynuację po zakończeniu pobytu. Każdy, kto do nas trafia, jest traktowany z szacunkiem i zrozumieniem.</p>
-                    <p>Wierzymy, że zmiana jest możliwa dla każdego. Wystarczy odpowiednie miejsce, odpowiedni ludzie i gotowość, żeby zrobić pierwszy krok.</p>
+            <div class="bento__grid">
+                <div class="bento__item bento__item--large fade-in">
+                    <img src="img/interior.jpg" alt="Wnętrze kliniki" loading="lazy">
+                    <span class="bento__label">Wnętrza</span>
                 </div>
-                <div class="about__stats fade-in">
-                    <div class="stat">
-                        <span class="stat__number">500+</span>
-                        <span class="stat__label">osób, którym pomogliśmy</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__number">5+</span>
-                        <span class="stat__label">lat doświadczenia</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__number">4.3</span>
-                        <span class="stat__label">ocena w Google</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__number">24/7</span>
-                        <span class="stat__label">dostępność</span>
-                    </div>
+                <div class="bento__item fade-in">
+                    <img src="img/pokoj.jpg" alt="Komfortowy pokój" loading="lazy">
+                    <span class="bento__label">Pokoje</span>
+                </div>
+                <div class="bento__item fade-in">
+                    <img src="img/sala.jpg" alt="Sala spotkań" loading="lazy">
+                    <span class="bento__label">Sala</span>
+                </div>
+                <div class="bento__item fade-in">
+                    <img src="img/natura.jpg" alt="Otoczenie natury" loading="lazy">
+                    <span class="bento__label">Otoczenie</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ GALERIA ============ -->
-    <section class="gallery">
-        <div class="gallery__track">
-            <div class="gallery__item fade-in">
-                <img src="img/budynek.jpeg" alt="Budynek Nagaba Clinic" loading="lazy">
-                <span class="gallery__caption">Nasz ośrodek</span>
-            </div>
-            <div class="gallery__item fade-in">
-                <img src="img/pokoj.jpg" alt="Komfortowy pokój" loading="lazy">
-                <span class="gallery__caption">Pokoje</span>
-            </div>
-            <div class="gallery__item fade-in">
-                <img src="img/sala.jpg" alt="Sala spotkań" loading="lazy">
-                <span class="gallery__caption">Sala spotkań</span>
-            </div>
-            <div class="gallery__item fade-in">
-                <img src="img/interior.jpg" alt="Wnętrze kliniki" loading="lazy">
-                <span class="gallery__caption">Wnętrza</span>
-            </div>
-            <div class="gallery__item fade-in">
-                <img src="img/natura.jpg" alt="Otoczenie natury" loading="lazy">
-                <span class="gallery__caption">Otoczenie</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ PODEJŚCIE ============ -->
+    <!-- ============ PODEJŚCIE — STAGGERED CARDS ============ -->
     <section class="approach" id="podejscie">
         <div class="container">
             <div class="section-header fade-in">
                 <p class="section-label">Nasze podejście</p>
                 <h2 class="section-title">Dlaczego <em>Nagaba Clinic</em></h2>
             </div>
-            <div class="approach__grid">
-                <div class="card fade-in">
-                    <div class="card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <div class="approach__list">
+                <div class="approach__row approach__row--left fade-in">
+                    <div class="approach__num">01</div>
+                    <div class="approach__card">
+                        <h3 class="approach__title">Kameralna atmosfera</h3>
+                        <p class="approach__text">Małe grupy, indywidualne podejście. Każdy jest tu ważny — nie jesteś kolejnym numerem, lecz osobą z własną historią.</p>
                     </div>
-                    <h3 class="card__title">Kameralna atmosfera</h3>
-                    <p class="card__text">Małe grupy, indywidualne podejście. Każdy jest tu ważny — nie jesteś kolejnym numerem, lecz osobą z własną historią.</p>
                 </div>
-                <div class="card fade-in">
-                    <div class="card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                <div class="approach__row approach__row--right fade-in">
+                    <div class="approach__card">
+                        <h3 class="approach__title">Indywidualny program</h3>
+                        <p class="approach__text">Program dopasowany do Twoich potrzeb. Warsztaty, sesje indywidualne, zajęcia relaksacyjne — wszystko w Twoim tempie.</p>
                     </div>
-                    <h3 class="card__title">Indywidualny program</h3>
-                    <p class="card__text">Program dopasowany do Twoich potrzeb. Warsztaty, sesje indywidualne, zajęcia relaksacyjne — wszystko w Twoim tempie.</p>
+                    <div class="approach__num">02</div>
                 </div>
-                <div class="card fade-in">
-                    <div class="card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <div class="approach__row approach__row--left fade-in">
+                    <div class="approach__num">03</div>
+                    <div class="approach__card">
+                        <h3 class="approach__title">Doświadczony zespół</h3>
+                        <p class="approach__text">Nasz zespół to ludzie z pasją i wieloletnim doświadczeniem. Towarzyszymy Ci w procesie zmiany bez moralizowania — z szacunkiem.</p>
                     </div>
-                    <h3 class="card__title">Doświadczony zespół</h3>
-                    <p class="card__text">Nasz zespół to ludzie z pasją i wieloletnim doświadczeniem. Towarzyszymy Ci w procesie zmiany bez moralizowania — z szacunkiem.</p>
                 </div>
-                <div class="card fade-in">
-                    <div class="card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div class="approach__row approach__row--right fade-in">
+                    <div class="approach__card">
+                        <h3 class="approach__title">Lokalizacja w naturze</h3>
+                        <p class="approach__text">Kaszubskie lasy, cisza, świeże powietrze. Z dala od miejskiego zgiełku, ale blisko Trójmiasta — idealne warunki do regeneracji.</p>
                     </div>
-                    <h3 class="card__title">Lokalizacja w naturze</h3>
-                    <p class="card__text">Kaszubskie lasy, cisza, świeże powietrze. Z dala od miejskiego zgiełku, ale blisko Trójmiasta — idealne warunki do regeneracji.</p>
+                    <div class="approach__num">04</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ PROCES ============ -->
+    <!-- ============ PROCES — DARK + VERTICAL TIMELINE ============ -->
     <section class="process">
         <div class="container">
             <div class="section-header fade-in">
                 <p class="section-label">Jak to wygląda</p>
                 <h2 class="section-title">Twoja droga <em>do zmiany</em></h2>
             </div>
-            <div class="process__steps">
-                <div class="step fade-in">
-                    <div class="step__number">01</div>
-                    <h3 class="step__title">Pierwszy kontakt</h3>
-                    <p class="step__text">Zadzwoń do nas. Porozmawiamy o Twojej sytuacji, odpowiemy na pytania i doradzimy najlepsze rozwiązanie. Bez zobowiązań.</p>
+            <div class="timeline">
+                <div class="timeline__line"></div>
+                <div class="timeline__item timeline__item--left fade-in">
+                    <div class="timeline__card">
+                        <div class="timeline__num">01</div>
+                        <h3 class="timeline__title">Pierwszy kontakt</h3>
+                        <p class="timeline__text">Zadzwoń do nas. Porozmawiamy o Twojej sytuacji, odpowiemy na pytania i doradzimy najlepsze rozwiązanie. Bez zobowiązań.</p>
+                    </div>
+                    <div class="timeline__dot"></div>
                 </div>
-                <div class="step fade-in">
-                    <div class="step__number">02</div>
-                    <h3 class="step__title">Indywidualny plan</h3>
-                    <p class="step__text">Tworzymy program dopasowany do Twoich potrzeb. Określamy cele, ramy czasowe i sposób pracy — wszystko w porozumieniu z Tobą.</p>
+                <div class="timeline__item timeline__item--right fade-in">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__num">02</div>
+                        <h3 class="timeline__title">Indywidualny plan</h3>
+                        <p class="timeline__text">Tworzymy program dopasowany do Twoich potrzeb. Określamy cele, ramy czasowe i sposób pracy — wszystko w porozumieniu z Tobą.</p>
+                    </div>
                 </div>
-                <div class="step fade-in">
-                    <div class="step__number">03</div>
-                    <h3 class="step__title">Pobyt i praca nad sobą</h3>
-                    <p class="step__text">Warsztaty, sesje, aktywności w otoczeniu natury. Codzienne wsparcie zespołu, komfortowe warunki i pełne wyżywienie.</p>
+                <div class="timeline__item timeline__item--left fade-in">
+                    <div class="timeline__card">
+                        <div class="timeline__num">03</div>
+                        <h3 class="timeline__title">Pobyt i praca nad sobą</h3>
+                        <p class="timeline__text">Warsztaty, sesje, aktywności w otoczeniu natury. Codzienne wsparcie zespołu, komfortowe warunki i pełne wyżywienie.</p>
+                    </div>
+                    <div class="timeline__dot"></div>
                 </div>
-                <div class="step fade-in">
-                    <div class="step__number">04</div>
-                    <h3 class="step__title">Kontynuacja po pobycie</h3>
-                    <p class="step__text">Nie zostawiamy Cię samego. Spotkania online, regularne zjazdy i stały kontakt z zespołem — żebyś mógł utrzymać nowy kierunek.</p>
+                <div class="timeline__item timeline__item--right fade-in">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__num">04</div>
+                        <h3 class="timeline__title">Kontynuacja po pobycie</h3>
+                        <p class="timeline__text">Nie zostawiamy Cię samego. Spotkania online, regularne zjazdy i stały kontakt z zespołem — żebyś mógł utrzymać nowy kierunek.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ ZESPÓŁ ============ -->
+    <!-- ============ ZESPÓŁ — WIDE HORIZONTAL CARDS ============ -->
     <section class="team" id="zespol">
         <div class="container">
             <div class="section-header fade-in">
                 <p class="section-label">Nasz zespół</p>
                 <h2 class="section-title">Ludzie, którzy <em>rozumieją</em></h2>
             </div>
-            <div class="team__grid">
-                <div class="team__member fade-in">
-                    <img src="img/krystian.png" alt="Krystian Nagaba" class="team__photo">
+            <div class="team__card team__card--normal fade-in">
+                <div class="team__img-wrap">
+                    <img src="img/krystian.png" alt="Krystian Nagaba" class="team__img">
+                </div>
+                <div class="team__info">
                     <h3 class="team__name">Krystian Nagaba</h3>
                     <p class="team__role">Założyciel, specjalista ds. rozwoju osobistego</p>
                     <p class="team__bio">Dyplomowany specjalista psychologii pozytywnej i odporności psychicznej. Ponad 5 lat doświadczenia i 500+ osób, którym pomógł znaleźć nową drogę. Towarzyszy w procesie zmiany bez moralizowania — z szacunkiem i zrozumieniem.</p>
@@ -272,8 +284,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="team__member fade-in">
-                    <img src="img/natalia.jpg" alt="Natalia Pucz" class="team__photo">
+            </div>
+            <div class="team__card team__card--reverse fade-in">
+                <div class="team__info">
                     <h3 class="team__name">Natalia Pucz</h3>
                     <p class="team__role">Specjalistka, wsparcie w procesie zmiany</p>
                     <p class="team__bio">Empatyczna, profesjonalna, oddana pracy z ludźmi. Natalia buduje bezpieczną przestrzeń do rozmowy i rozwoju. Jej ciepłe podejście sprawia, że od pierwszego dnia czujesz się jak w domu.</p>
@@ -282,6 +295,9 @@
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </a>
                     </div>
+                </div>
+                <div class="team__img-wrap">
+                    <img src="img/natalia.jpg" alt="Natalia Pucz" class="team__img">
                 </div>
             </div>
         </div>
@@ -450,22 +466,15 @@
                 <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Akceptuj</button>
             </div>
         </div>
-        <!-- Granularne ustawienia -->
         <div class="cookie-banner__details" id="cookieDetails">
             <div class="cookie-banner__option">
-                <label>
-                    <input type="checkbox" checked disabled> Niezbędne <small>(wymagane)</small>
-                </label>
+                <label><input type="checkbox" checked disabled> Niezbędne <small>(wymagane)</small></label>
             </div>
             <div class="cookie-banner__option">
-                <label>
-                    <input type="checkbox" id="cookieAnalytics"> Analityczne
-                </label>
+                <label><input type="checkbox" id="cookieAnalytics"> Analityczne</label>
             </div>
             <div class="cookie-banner__option">
-                <label>
-                    <input type="checkbox" id="cookieMarketing"> Marketingowe
-                </label>
+                <label><input type="checkbox" id="cookieMarketing"> Marketingowe</label>
             </div>
             <button class="cookie-banner__btn cookie-banner__btn--save" id="cookieSave">Zapisz ustawienia</button>
         </div>
