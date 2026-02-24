@@ -15,8 +15,8 @@
     --txt: #2C2C2C;
     --txt2: #5A5A5A;
     --gray: #9AACAE;
-    --serif: 'Instrument Serif', Georgia, serif;
-    --sans: 'Space Grotesk', -apple-system, sans-serif;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
     --r: 16px;
     --r2: 24px;
 }
@@ -112,25 +112,26 @@ h2 em { font-style: italic; color: var(--gold-d); }
 .hero__desc { font-size: 1.05rem; color: var(--txt2); max-width: 440px; margin-bottom: 36px; }
 .hero__btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-/* Hero visual — floating cards */
+/* Hero visual — photo + floating cards */
 .hero__visual {
-    position: relative; height: 480px; justify-self: start;
+    position: relative; justify-self: start; min-height: 480px;
+}
+.hero__photo {
+    width: 100%; max-width: 480px; border-radius: var(--r2);
+    object-fit: cover; aspect-ratio: 4/3;
+    box-shadow: 0 20px 60px rgba(0,0,0,.12);
 }
 .hero__card {
-    position: absolute; background: var(--white); border-radius: var(--r2);
-    padding: 28px 32px; border: 1px solid rgba(196,149,106,.12);
-    box-shadow: 0 12px 40px rgba(0,0,0,.06);
+    position: absolute; background: rgba(255,255,255,.9); backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--r2); padding: 20px 24px;
+    border: 1px solid rgba(196,149,106,.15);
+    box-shadow: 0 12px 40px rgba(0,0,0,.08);
 }
-.hero__card-num { display: block; font-family: var(--serif); font-size: 2.8rem; color: var(--green); line-height: 1; }
-.hero__card-label { font-size: .82rem; color: var(--txt2); margin-top: 4px; }
-.hero__card--1 { top: 20px; left: 40px; }
-.hero__card--2 { top: 180px; left: 200px; }
-.hero__card--3 { top: 320px; left: 60px; }
-.hero__orb {
-    position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none;
-}
-.hero__orb--1 { width: 350px; height: 350px; background: var(--gold-l); opacity: .2; top: -40px; left: 120px; }
-.hero__orb--2 { width: 250px; height: 250px; background: var(--green); opacity: .08; bottom: 0; left: 0; }
+.hero__card-num { display: block; font-family: var(--serif); font-size: 2.4rem; color: var(--green); line-height: 1; }
+.hero__card-label { font-size: .78rem; color: var(--txt2); margin-top: 4px; }
+.hero__card--1 { bottom: -20px; left: -30px; }
+.hero__card--2 { top: 20px; right: -30px; }
 
 /* ===========================================
    MARQUEE
@@ -164,10 +165,9 @@ h2 em { font-style: italic; color: var(--gold-d); }
     transition: transform .3s, box-shadow .3s;
 }
 .bento__cell:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
-.bento__cell--tall { grid-row: span 2; background: var(--green-d); color: #fff; display: flex; flex-direction: column; justify-content: center; }
-.bento__cell--tall h3 { color: var(--gold-l); }
-.bento__cell--tall p { color: rgba(255,255,255,.6); }
-.bento__icon { font-size: 2rem; margin-bottom: 12px; }
+.bento__cell--img { grid-row: span 2; padding: 0; overflow: hidden; }
+.bento__cell--img img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r2); }
+.bento__photo { width: 100%; height: 120px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; }
 .bento__cell h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 8px; color: var(--green-d); }
 .bento__cell p { font-size: .88rem; color: var(--txt2); line-height: 1.6; }
 
@@ -235,13 +235,11 @@ h2 em { font-style: italic; color: var(--gold-d); }
     transition: transform .3s;
 }
 .person:hover { transform: translateY(-3px); }
-.person__avatar {
-    flex-shrink: 0; width: 80px; height: 80px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif); font-size: 1.4rem; color: #fff; font-weight: 600;
+img.person__avatar {
+    flex-shrink: 0; width: 90px; height: 90px; border-radius: 50%;
+    object-fit: cover; object-position: top center;
+    border: 3px solid rgba(196,149,106,.2);
 }
-.person__avatar--k { background: linear-gradient(135deg, var(--green-l), var(--green-d)); }
-.person__avatar--n { background: linear-gradient(135deg, var(--gold-l), var(--gold-d)); }
 .person h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--green-d); margin-bottom: 2px; }
 .person__role { font-size: .8rem; color: var(--gold-d); font-weight: 600; margin-bottom: 12px; }
 .person__bio { font-size: .88rem; color: var(--txt2); line-height: 1.7; margin-bottom: 12px; }
@@ -388,7 +386,9 @@ h2 em { font-style: italic; color: var(--gold-d); }
     .hero__text { justify-self: center; max-width: 100%; }
     .hero__desc { margin: 0 auto 32px; }
     .hero__btns { justify-content: center; }
-    .hero__visual { display: none; }
+    .hero__visual { display: block; text-align: center; }
+    .hero__photo { max-width: 100%; }
+    .hero__card { display: none; }
 
     .about { padding: 80px 24px; }
     .about__content { grid-template-columns: 1fr; }
