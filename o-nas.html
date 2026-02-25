@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nas | Nagaba Clinic — Kameralna Klinika na Kaszubach</title>
+    <meta name="description" content="Poznaj Nagaba Clinic i nasz zespół. Kameralna klinika w Rumi, na Kaszubach. Indywidualne podejście, doświadczony zespół, przestrzeń do odnowy.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nagaba-clinic.pl/o-nas.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="O nas | Nagaba Clinic">
+    <meta property="og:description" content="Poznaj Nagaba Clinic i nasz zespół. Kameralna klinika w Rumi, na Kaszubach.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nagaba-clinic.pl/o-nas.html">
+    <meta property="og:locale" content="pl_PL">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ---------- CSS Variables ---------- */
+        :root {
+            --cream: #FFF8F0;
+            --cream-dark: #F5EDE3;
+            --gold: #C4956A;
+            --gold-light: #D4A87A;
+            --gold-dark: #A07850;
+            --green: #2D4A3E;
+            --green-light: #3D6354;
+            --green-dark: #1E352B;
+            --gray: #6B7B7D;
+            --gray-light: #9AACAE;
+            --gray-dark: #4A5557;
+            --white: #FFFFFF;
+            --text: #2C2C2C;
+            --text-light: #5A5A5A;
+
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 8px 32px rgba(0,0,0,0.08);
+            --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
+
+            --transition: 0.3s ease;
+        }
+
+        /* ---------- Reset ---------- */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            padding-top: 72px;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ---------- Section Headers ---------- */
+        .section-label {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 600;
+            color: var(--green-dark);
+            line-height: 1.15;
+            margin-bottom: 24px;
+        }
+
+        .section-title em {
+            font-style: italic;
+            color: var(--gold-dark);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition);
+            border: 2px solid transparent;
+            text-decoration: none;
+        }
+
+        .btn--primary {
+            background: var(--green);
+            color: var(--white);
+            border-color: var(--green);
+        }
+
+        .btn--primary:hover {
+            background: var(--green-light);
+            border-color: var(--green-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(45, 74, 62, 0.3);
+        }
+
+        .btn--outline {
+            background: transparent;
+            color: var(--green);
+            border-color: var(--green);
+        }
+
+        .btn--outline:hover {
+            background: var(--green);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .btn--ghost {
+            background: rgba(255,255,255,0.15);
+            color: var(--white);
+            border-color: rgba(255,255,255,0.3);
+            backdrop-filter: blur(8px);
+        }
+
+        .btn--ghost:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn--large {
+            padding: 18px 40px;
+            font-size: 1.05rem;
+        }
+
+        /* ---------- Navigation ---------- */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(255, 248, 240, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(196, 149, 106, 0.15);
+            transition: all var(--transition);
+        }
+
+        .nav__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav__logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav__logo-icon { color: var(--gold); font-size: 1.6rem; }
+        .nav__logo-accent { color: var(--gold); }
+
+        .nav__links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        .nav__links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--gray-dark);
+            transition: color var(--transition);
+            position: relative;
+        }
+
+        .nav__links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--gold);
+            transition: width var(--transition);
+        }
+
+        .nav__links a:hover { color: var(--green); }
+        .nav__links a:hover::after { width: 100%; }
+        .nav__links a.active { color: var(--green); }
+        .nav__links a.active::after { width: 100%; }
+
+        .nav__cta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            background: var(--green);
+            color: var(--white);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all var(--transition);
+        }
+
+        .nav__cta:hover {
+            background: var(--green-light);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(45, 74, 62, 0.3);
+        }
+
+        .nav__hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .nav__hamburger span {
+            display: block;
+            width: 24px; height: 2px;
+            background: var(--green-dark);
+            transition: all var(--transition);
+            border-radius: 2px;
+        }
+
+        /* ---------- Page Hero ---------- */
+        .page-hero {
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+            padding: 100px 24px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            width: 500px; height: 500px;
+            border-radius: 50%;
+            background: rgba(196, 149, 106, 0.08);
+            top: -200px; right: -100px;
+            filter: blur(80px);
+        }
+
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .page-hero .overline {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ---------- About Section ---------- */
+        .about {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .about__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about__text .overline {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .about__text h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 600;
+            color: var(--green-dark);
+            margin-bottom: 24px;
+            line-height: 1.15;
+        }
+
+        .about__text p {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .about__list {
+            list-style: none;
+            margin-top: 30px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .about__list li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 18px;
+            font-weight: 500;
+            color: var(--text);
+            background: var(--cream);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(196, 149, 106, 0.12);
+            transition: all var(--transition);
+        }
+
+        .about__list li:hover {
+            transform: translateX(5px);
+            border-color: rgba(196, 149, 106, 0.3);
+        }
+
+        .about__list li .check {
+            width: 32px; height: 32px;
+            background: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+        }
+
+        .about__list li .check svg {
+            width: 14px; height: 14px;
+            stroke: var(--white);
+            stroke-width: 3;
+            fill: none;
+        }
+
+        .about__image {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about__image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ---------- Team ---------- */
+        .team {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .team__card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 48px;
+            align-items: center;
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(196, 149, 106, 0.15);
+            transition: all var(--transition);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .team__card:last-child { margin-bottom: 0; }
+
+        .team__card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .team__card--reverse {
+            grid-template-columns: 1fr 300px;
+        }
+
+        .team__img-wrap {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .team__img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .team__name {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin-bottom: 6px;
+        }
+
+        .team__role {
+            font-size: 0.85rem;
+            color: var(--gold-dark);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .team__bio {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .team__social { display: flex; gap: 12px; }
+
+        .team__social a {
+            width: 40px; height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--cream);
+            color: var(--green);
+            transition: all var(--transition);
+            border: 1px solid rgba(45, 74, 62, 0.15);
+        }
+
+        .team__social a:hover {
+            background: var(--green);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* ---------- Features Grid ---------- */
+        .features {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .features__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--cream);
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(196, 149, 106, 0.12);
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(196, 149, 106, 0.3);
+        }
+
+        .feature-card .icon {
+            width: 64px; height: 64px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(45, 74, 62, 0.08);
+            border-radius: 50%;
+        }
+
+        .feature-card .icon svg {
+            width: 28px; height: 28px;
+            stroke: var(--green);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* ---------- Gallery ---------- */
+        .gallery {
+            padding: 100px 0;
+            background: var(--green-dark);
+        }
+
+        .gallery .section-label { color: var(--gold-light); }
+        .gallery .section-title { color: var(--white); }
+        .gallery .section-title em { color: var(--gold-light); }
+
+        .gallery__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .gallery__item {
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            position: relative;
+            border-radius: var(--radius-lg);
+        }
+
+        .gallery__item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.5) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery__item:hover::after { opacity: 1; }
+
+        .gallery__item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery__item:hover img { transform: scale(1.08); }
+
+        .gallery__label {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 16px 20px;
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            z-index: 2;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.4s ease;
+        }
+
+        .gallery__item:hover .gallery__label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ---------- CTA Section ---------- */
+        .cta-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            width: 500px; height: 500px;
+            border-radius: 50%;
+            background: rgba(196, 149, 106, 0.1);
+            top: -200px; left: -100px;
+            filter: blur(80px);
+        }
+
+        .cta-section__title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .cta-section__title em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .cta-section__text {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 500px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .cta-section__buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-section .btn--primary {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--white);
+        }
+
+        .cta-section .btn--primary:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+            box-shadow: 0 8px 24px rgba(196,149,106,0.4);
+        }
+
+        .cta-section .btn--ghost {
+            color: var(--white);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .cta-section .btn--ghost:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+        }
+
+        /* ---------- Footer ---------- */
+        .footer {
+            padding: 64px 0 32px;
+            background: var(--green-dark);
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer__logo {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .footer__desc { font-size: 0.88rem; line-height: 1.7; }
+
+        .footer h4 {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer__contact p, .footer__links p {
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+        }
+
+        .footer__contact a, .footer__links a { transition: color var(--transition); }
+        .footer__contact a:hover, .footer__links a:hover { color: var(--gold-light); }
+
+        .footer__social-links { display: flex; gap: 12px; }
+
+        .footer__social-links a {
+            width: 40px; height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.7);
+            transition: all var(--transition);
+        }
+
+        .footer__social-links a:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .footer__bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.82rem;
+        }
+
+        /* ---------- Floating CTA ---------- */
+        .floating-cta {
+            display: none;
+            position: fixed;
+            bottom: 24px; right: 24px;
+            z-index: 999;
+            background: var(--green);
+            color: var(--white);
+            padding: 14px 24px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 32px rgba(45, 74, 62, 0.4);
+            transition: all var(--transition);
+            animation: pulse-cta 3s ease-in-out infinite;
+        }
+
+        .floating-cta:hover {
+            background: var(--green-light);
+            transform: translateY(-2px);
+        }
+
+        @keyframes pulse-cta {
+            0%, 100% { box-shadow: 0 8px 32px rgba(45, 74, 62, 0.4); }
+            50% { box-shadow: 0 8px 48px rgba(45, 74, 62, 0.6); }
+        }
+
+        /* ---------- Animations ---------- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 1024px) {
+            .about__grid { grid-template-columns: 1fr; gap: 40px; }
+            .features__grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+            .team__card { grid-template-columns: 240px 1fr; gap: 32px; padding: 32px; }
+            .team__card--reverse { grid-template-columns: 1fr 240px; }
+            .footer__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav__links { display: none; }
+            .nav__cta { display: none; }
+            .nav__hamburger { display: flex; }
+
+            .nav__links--open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px; left: 0; right: 0;
+                background: var(--cream);
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid rgba(196, 149, 106, 0.15);
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav__links--open a { font-size: 1.1rem; }
+
+            .page-hero h1 { font-size: 2.2rem; }
+            .features__grid { grid-template-columns: 1fr; }
+            .gallery__grid { grid-template-columns: 1fr; }
+
+            .team__card,
+            .team__card--reverse {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 24px;
+            }
+
+            .team__card--reverse .team__img-wrap { order: -1; }
+
+            .team__img-wrap {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .team__social { justify-content: center; }
+
+            .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+
+            .floating-cta { display: flex; }
+
+            .cta-section__buttons { flex-direction: column; align-items: center; }
+            .btn--large { width: 100%; justify-content: center; }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .page-hero { padding: 80px 24px 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">
+                <span class="nav__logo-icon">&#9678;</span>
+                Nagaba <span class="nav__logo-accent">Clinic</span>
+            </a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="o-nas.html" class="active">O nas</a></li>
+                <li><a href="cennik.html">Cennik</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <a href="tel:+48536598821" class="nav__cta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                536 598 821
+            </a>
+            <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="overline">O nas</span>
+            <h1>Poznaj Nagaba Clinic</h1>
+            <p>Kameralna klinika w Rumi, na Kaszubach. Miejsce stworzone z pasji do pomagania i wiary w to, że zmiana jest możliwa.</p>
+        </div>
+    </section>
+
+    <!-- ============ O KLINICE ============ -->
+    <section class="about">
+        <div class="container">
+            <div class="about__grid fade-in">
+                <div class="about__text">
+                    <span class="overline">Klinika</span>
+                    <h2>Nagaba Clinic — kameralna klinika w Rumi, na Kaszubach</h2>
+                    <p>Nagaba Clinic to miejsce, w którym spotykają się profesjonalizm i ludzkie podejście. Powstaliśmy z przekonania, że każdy zasługuje na szansę zmiany — w spokojnym otoczeniu, z odpowiednimi ludźmi u boku.</p>
+                    <p>Oferujemy pobyt stacjonarny w komfortowych warunkach, z pełnym wyżywieniem, codzienną opieką zespołu i indywidualnym programem dopasowanym do potrzeb każdego uczestnika.</p>
+                    <ul class="about__list">
+                        <li>
+                            <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Kameralna atmosfera (małe grupy)
+                        </li>
+                        <li>
+                            <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Wieloletnie doświadczenie zespołu
+                        </li>
+                        <li>
+                            <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Lokalizacja blisko Trójmiasta
+                        </li>
+                        <li>
+                            <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Wsparcie po zakończeniu pobytu
+                        </li>
+                    </ul>
+                </div>
+                <div class="about__image">
+                    <img src="img/budynek.jpeg" alt="Nagaba Clinic - budynek kliniki w Rumi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ZESPÓŁ ============ -->
+    <section class="team">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Nasz zespół</p>
+                <h2 class="section-title">Ludzie, którzy <em>rozumieją</em></h2>
+                <p>Za każdym programem stoją ludzie z doświadczeniem i pasją do pomagania.</p>
+            </div>
+
+            <div class="team__card team__card--normal fade-in">
+                <div class="team__img-wrap">
+                    <img src="img/krystian.png" alt="Krystian Nagaba" class="team__img">
+                </div>
+                <div class="team__info">
+                    <h3 class="team__name">Krystian Nagaba</h3>
+                    <p class="team__role">Założyciel, specjalista ds. rozwoju osobistego</p>
+                    <p class="team__bio">Dyplomowany specjalista psychologii pozytywnej i odporności psychicznej. Ponad 5 lat doświadczenia i 500+ osób, którym pomógł znaleźć nową drogę. Towarzyszy w procesie zmiany bez moralizowania — z szacunkiem i zrozumieniem.</p>
+                    <div class="team__social">
+                        <a href="https://www.instagram.com/krystiannagaba/" target="_blank" rel="noopener" aria-label="Instagram Krystiana">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@krystiannagaba" target="_blank" rel="noopener" aria-label="YouTube Krystiana">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@krystian.nagaba" target="_blank" rel="noopener" aria-label="TikTok Krystiana">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.57 6.33 6.33 0 0 0 9.37 22a6.33 6.33 0 0 0 6.33-6.33V9.31a8.16 8.16 0 0 0 4.29 1.2V7.15a4.85 4.85 0 0 1-.4-.46z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team__card team__card--reverse fade-in">
+                <div class="team__info">
+                    <h3 class="team__name">Natalia Pucz</h3>
+                    <p class="team__role">Specjalistka, wsparcie w procesie zmiany</p>
+                    <p class="team__bio">Empatyczna, profesjonalna, oddana pracy z ludźmi. Natalia buduje bezpieczną przestrzeń do rozmowy i rozwoju. Jej ciepłe podejście sprawia, że od pierwszego dnia czujesz się jak w domu.</p>
+                    <div class="team__social">
+                        <a href="https://www.facebook.com/natalia.pucz" target="_blank" rel="noopener" aria-label="Facebook Natalii">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="team__img-wrap">
+                    <img src="img/natalia.jpg" alt="Natalia Pucz" class="team__img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CO OFERUJEMY ============ -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Oferta</p>
+                <h2 class="section-title">Co <em>oferujemy</em></h2>
+            </div>
+
+            <div class="features__grid">
+                <div class="feature-card fade-in">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                    </div>
+                    <h3>Kameralna atmosfera</h3>
+                    <p>Małe grupy, indywidualne podejście. Każdy jest tu ważny — nie jesteś kolejnym numerem.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    </div>
+                    <h3>Indywidualny program</h3>
+                    <p>Program dopasowany do Twoich potrzeb. Warsztaty, sesje indywidualne, zajęcia relaksacyjne.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3>Doświadczony zespół</h3>
+                    <p>Ludzie z pasją i wieloletnim doświadczeniem. Towarzyszymy w procesie zmiany z szacunkiem.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <h3>Lokalizacja</h3>
+                    <p>Rumia, blisko Trójmiasta. Spokojna okolica, łatwy dojazd z Gdańska, Gdyni i Sopotu.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    </div>
+                    <h3>Wsparcie po pobycie</h3>
+                    <p>Spotkania online, regularne zjazdy i stały kontakt z zespołem po zakończeniu programu.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3>Wsparcie dla bliskich</h3>
+                    <p>Konsultacje dla rodzin — online lub na miejscu. Pomagamy nie tylko uczestnikom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GALERIA ============ -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Galeria</p>
+                <h2 class="section-title">Nasza <em>klinika</em></h2>
+            </div>
+
+            <div class="gallery__grid">
+                <div class="gallery__item fade-in">
+                    <img src="img/budynek.jpeg" alt="Nagaba Clinic - budynek" loading="lazy">
+                    <span class="gallery__label">Budynek</span>
+                </div>
+                <div class="gallery__item fade-in">
+                    <img src="img/aerial.jpg" alt="Nagaba Clinic - widok z lotu ptaka" loading="lazy">
+                    <span class="gallery__label">Z lotu ptaka</span>
+                </div>
+                <div class="gallery__item fade-in">
+                    <img src="img/pokoj.jpg" alt="Nagaba Clinic - pokój" loading="lazy">
+                    <span class="gallery__label">Pokoje</span>
+                </div>
+                <div class="gallery__item fade-in">
+                    <img src="img/sala.jpg" alt="Nagaba Clinic - sala spotkań" loading="lazy">
+                    <span class="gallery__label">Sala</span>
+                </div>
+                <div class="gallery__item fade-in">
+                    <img src="img/natura.jpg" alt="Nagaba Clinic - otoczenie natury" loading="lazy">
+                    <span class="gallery__label">Otoczenie</span>
+                </div>
+                <div class="gallery__item fade-in">
+                    <img src="img/krystian.png" alt="Krystian Nagaba" loading="lazy">
+                    <span class="gallery__label">Nasz zespół</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-section__content fade-in">
+                <h2 class="cta-section__title">Chcesz dowiedzieć się <em>więcej</em>?</h2>
+                <p class="cta-section__text">Zadzwoń do nas — porozmawiamy o Twojej sytuacji. Bez zobowiązań, bez oceniania. Jesteśmy tu dla Ciebie.</p>
+                <div class="cta-section__buttons">
+                    <a href="tel:+48536598821" class="btn btn--primary btn--large">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        536 598 821
+                    </a>
+                    <a href="https://osrodek-myway.pl" class="btn btn--ghost btn--large" target="_blank" rel="noopener">Dowiedz się więcej</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="nav__logo-icon">&#9678;</span>
+                        Nagaba <span class="nav__logo-accent">Clinic</span>
+                    </a>
+                    <p class="footer__desc">Kameralna klinika w Rumi, na Kaszubach. Przestrzeń do odnowy blisko Trójmiasta.</p>
+                </div>
+                <div class="footer__contact">
+                    <h4>Kontakt</h4>
+                    <p><a href="tel:+48536598821">+48 536 598 821</a></p>
+                    <p>ul. Gdańska 10/13</p>
+                    <p>84-230 Rumia</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Linki</h4>
+                    <p><a href="o-nas.html">O nas</a></p>
+                    <p><a href="cennik.html">Cennik</a></p>
+                    <p><a href="kontakt.html">Kontakt</a></p>
+                    <p><a href="https://osrodek-myway.pl" target="_blank" rel="noopener">osrodek-myway.pl</a></p>
+                </div>
+                <div class="footer__social">
+                    <h4>Social media</h4>
+                    <div class="footer__social-links">
+                        <a href="https://www.facebook.com/osrodekleczeniauzalezniencom" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/krystiannagaba/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@krystiannagaba" target="_blank" rel="noopener" aria-label="YouTube">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@krystian.nagaba" target="_blank" rel="noopener" aria-label="TikTok">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.57 6.33 6.33 0 0 0 9.37 22a6.33 6.33 0 0 0 6.33-6.33V9.31a8.16 8.16 0 0 0 4.29 1.2V7.15a4.85 4.85 0 0 1-.4-.46z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Nagaba Clinic. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ FLOATING CTA (MOBILE) ============ -->
+    <a href="tel:+48536598821" class="floating-cta" aria-label="Zadzwoń">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Zadzwoń</span>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('nav__links--open');
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in--visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('nav--scrolled', window.scrollY > 50);
+        });
+    </script>
+
+</body>
+</html>
