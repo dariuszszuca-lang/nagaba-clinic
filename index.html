@@ -31,13 +31,24 @@
         "description": "Kameralna klinika w otoczeniu kaszubskiej przyrody. Indywidualne podejście, profesjonalny zespół, przestrzeń do odnowy.",
         "url": "https://nagaba-clinic.pl",
         "telephone": "+48536598821",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Wichrowe Wzgórza 21",
-            "addressLocality": "Kąpino",
-            "postalCode": "84-200",
-            "addressCountry": "PL"
-        },
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "name": "Placówka",
+                "streetAddress": "Wichrowe Wzgórza 21",
+                "addressLocality": "Kąpino",
+                "postalCode": "84-200",
+                "addressCountry": "PL"
+            },
+            {
+                "@type": "PostalAddress",
+                "name": "Siedziba firmy",
+                "streetAddress": "Gdańska 10/13",
+                "addressLocality": "Rumia",
+                "postalCode": "84-230",
+                "addressCountry": "PL"
+            }
+        ],
         "geo": {
             "@type": "GeoCoordinates",
             "latitude": 54.5256,
@@ -326,9 +337,17 @@
                     <div class="location__address">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         <div>
-                            <strong>Nagaba Clinic</strong><br>
+                            <strong>Placówka (przyjmujemy pacjentów)</strong><br>
                             ul. Wichrowe Wzgórza 21<br>
                             84-200 Kąpino
+                        </div>
+                    </div>
+                    <div class="location__address" style="margin-top: -16px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        <div>
+                            <strong>Siedziba firmy</strong><br>
+                            ul. Gdańska 10/13<br>
+                            84-230 Rumia
                         </div>
                     </div>
                     <div class="location__distances">
@@ -392,7 +411,7 @@
                 </details>
                 <details class="faq__item fade-in">
                     <summary class="faq__question">Jak dojechać do kliniki?</summary>
-                    <p class="faq__answer">Placówka przyjmuje pod adresem ul. Wichrowe Wzgórza 21, 84-200 Kąpino (blisko Trójmiasta). Oferujemy bezpłatny odbiór z dworca — wystarczy umówić się telefonicznie.</p>
+                    <p class="faq__answer">Placówka przyjmuje pacjentów pod adresem ul. Wichrowe Wzgórza 21, 84-200 Kąpino (blisko Trójmiasta). Siedziba firmy mieści się przy ul. Gdańskiej 10/13, 84-230 Rumia. Oferujemy bezpłatny odbiór z dworca — wystarczy umówić się telefonicznie.</p>
                 </details>
             </div>
         </div>
@@ -429,8 +448,12 @@
                 <div class="footer__contact">
                     <h4>Kontakt</h4>
                     <p><a href="tel:+48536598821">+48 536 598 821</a></p>
+                    <p style="margin-top: 12px; font-weight: 600; color: rgba(255,255,255,0.9);">Placówka:</p>
                     <p>ul. Wichrowe Wzgórza 21</p>
                     <p>84-200 Kąpino</p>
+                    <p style="margin-top: 12px; font-weight: 600; color: rgba(255,255,255,0.9);">Siedziba firmy:</p>
+                    <p>ul. Gdańska 10/13</p>
+                    <p>84-230 Rumia</p>
                 </div>
                 <div class="footer__links">
                     <h4>Linki</h4>

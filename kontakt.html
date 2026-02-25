@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt | Nagaba Clinic — Kameralna Klinika na Kaszubach</title>
-    <meta name="description" content="Skontaktuj się z Nagaba Clinic. Telefon: 536 598 821. Adres: ul. Wichrowe Wzgórza 21, 84-200 Kąpino. Czynne 24/7. Bezpłatna rozmowa wstępna.">
+    <meta name="description" content="Skontaktuj się z Nagaba Clinic. Telefon: 536 598 821. Placówka: ul. Wichrowe Wzgórza 21, Kąpino. Siedziba firmy: ul. Gdańska 10/13, Rumia. Czynne 24/7.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://nagaba-clinic.pl/kontakt.html">
 
@@ -28,13 +28,24 @@
         "name": "Nagaba Clinic",
         "telephone": "+48536598821",
         "email": "kontakt@osrodek-myway.pl",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Wichrowe Wzgórza 21",
-            "addressLocality": "Kąpino",
-            "postalCode": "84-200",
-            "addressCountry": "PL"
-        },
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "name": "Placówka",
+                "streetAddress": "Wichrowe Wzgórza 21",
+                "addressLocality": "Kąpino",
+                "postalCode": "84-200",
+                "addressCountry": "PL"
+            },
+            {
+                "@type": "PostalAddress",
+                "name": "Siedziba firmy",
+                "streetAddress": "Gdańska 10/13",
+                "addressLocality": "Rumia",
+                "postalCode": "84-230",
+                "addressCountry": "PL"
+            }
+        ],
         "geo": {
             "@type": "GeoCoordinates",
             "latitude": 54.5256,
@@ -922,14 +933,25 @@
                         </div>
                     </div>
 
-                    <!-- Address -->
+                    <!-- Address: Placówka -->
                     <div class="contact-card">
                         <div class="contact-card__icon">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         </div>
                         <div class="contact-card__content">
-                            <h3>Adres</h3>
+                            <h3>Placówka</h3>
                             <p>ul. Wichrowe Wzgórza 21<br>84-200 Kąpino</p>
+                        </div>
+                    </div>
+
+                    <!-- Address: Siedziba firmy -->
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <div class="contact-card__content">
+                            <h3>Siedziba firmy</h3>
+                            <p>ul. Gdańska 10/13<br>84-230 Rumia</p>
                         </div>
                     </div>
 
@@ -1089,8 +1111,12 @@
                 <div class="footer__contact">
                     <h4>Kontakt</h4>
                     <p><a href="tel:+48536598821">+48 536 598 821</a></p>
+                    <p style="margin-top: 12px; font-weight: 600; color: rgba(255,255,255,0.9);">Placówka:</p>
                     <p>ul. Wichrowe Wzgórza 21</p>
                     <p>84-200 Kąpino</p>
+                    <p style="margin-top: 12px; font-weight: 600; color: rgba(255,255,255,0.9);">Siedziba firmy:</p>
+                    <p>ul. Gdańska 10/13</p>
+                    <p>84-230 Rumia</p>
                 </div>
                 <div class="footer__links">
                     <h4>Linki</h4>
